@@ -10,6 +10,8 @@ namespace Project
         public Inventory() {
             _itemsInventory = new List<Item>();
         }
+        public List<Item> GetItemsInventory() => _itemsInventory;
+        public Item GetItemInInventory(int index) => _itemsInventory[index];
         public void AddItem(string name, int minQuantity, int availableQuantity, string locationName, string supplierName, int category)
         {
             //return bool for success?
