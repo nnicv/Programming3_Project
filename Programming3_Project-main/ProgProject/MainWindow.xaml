@@ -1,0 +1,41 @@
+﻿<Window x:Class="ProgProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="676" Width="688" ResizeMode="NoResize"
+        Closing="Window_Closing">
+    <Grid Margin="0,0,0,20">
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Text="Inventory Tracker" TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="194" FontSize="25"/>
+        <Button Content="Add New Item" HorizontalAlignment="Left" Margin="549,59,0,0" VerticalAlignment="Top" Height="28" Width="106" Click="AddItem_BtnClick"/>
+        <Button Name="RemoveBtn" Content="Remove Item" HorizontalAlignment="Left" Margin="551,362,0,0" VerticalAlignment="Top" Height="28" Width="105" Click="RemoveItem_BtnClick"/>
+        <Button Name="UpdateBtn" Content="Update Item" HorizontalAlignment="Left" Margin="550,310,0,0" VerticalAlignment="Top" Height="28" Width="106" RenderTransformOrigin="0.514,0.533" Click="UpdateItem_BtnClick"/>
+        <Button Content="General Report" HorizontalAlignment="Left" Margin="550,210,0,0" VerticalAlignment="Top" Height="28" Width="105" RenderTransformOrigin="0.514,0.533" Click="GenerateGeneralReport"/>
+        <Button Content="Shopping List" HorizontalAlignment="Left" Margin="549,259,0,0" VerticalAlignment="Top" Height="28" Width="106" RenderTransformOrigin="0.514,0.533" Click="GenerateShoppingList"/>
+        <Button Content="Load Items" HorizontalAlignment="Left" Margin="550,160,0,0" VerticalAlignment="Top" Height="28" Width="105" RenderTransformOrigin="0.514,0.533" Click="LoadItems_BtnClick"/>
+        <Button Content="Save Items" HorizontalAlignment="Left" Margin="549,110,0,0" VerticalAlignment="Top" Height="28" Width="106" RenderTransformOrigin="0.514,0.533" Click="SaveItems_BtnClick"/>
+        <DataGrid Name="ItemDataGrid" ItemsSource="{Binding Source=inventoryTracker}" Margin="10,59,141,107"
+                  Grid.Column="0" AutoGenerateColumns="False" CanUserAddRows="False"
+                  CanUserDeleteRows="False" CanUserReorderColumns="False" 
+                  CanUserResizeColumns="False" CanUserResizeRows="False" 
+                  CanUserSortColumns="False" SelectionMode="Single"
+                  SelectionUnit="FullRow">
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="MouseLeftButtonUp" Handler="Row_Click"></EventSetter>
+                </Style>
+            </DataGrid.ItemContainerStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="1*" Header="Qty" Binding="{Binding AvailableQuantity}"></DataGridTextColumn>
+                <DataGridTextColumn Width="1.3*" Header="Minimum" Binding="{Binding MinQuantity}"></DataGridTextColumn>
+                <DataGridTextColumn Width="2*" Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Width="2*" Header="Location" Binding="{Binding Location}"></DataGridTextColumn>
+                <DataGridTextColumn Width="2*" Header="Supplier" Binding="{Binding Supplier}"></DataGridTextColumn>
+                <DataGridTextColumn Width="2*" Header="Category" Binding="{Binding Category}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
