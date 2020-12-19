@@ -1,0 +1,15 @@
+﻿<Window x:Class="ProgProject.RemoveItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgProject"
+        mc:Ignorable="d"
+        Title="RemoveItem" Height="304" Width="429">
+    <Grid Margin="0,0,0,-6">
+
+        <Button Content="Remove Item" HorizontalAlignment="Center" Margin="0,156,0,0" VerticalAlignment="Top" Height="19" Width="106"/>
+        <TextBlock HorizontalAlignment="Left" Margin="49,100,0,0" Text="Select Item to Remove:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15"/>
+        <ComboBox HorizontalAlignment="Left" Margin="217,98,0,0" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>

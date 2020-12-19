@@ -1,0 +1,25 @@
+﻿<Window x:Class="ProgProject.AddItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgProject"
+        mc:Ignorable="d"
+        Title="AddItem" Height="485" Width="458">
+    <Grid Margin="0,0,0,193">
+        <TextBlock HorizontalAlignment="Left" Margin="41,71,0,0" Text="Available quantity:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="189,10,0,0" Text="Add Item" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="41,104,0,0" Text="Minimum quantity:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="41,137,0,0" Text="Location:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="41,171,0,0" Text="Supplier:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="41,205,0,0" Text="Category:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="41,37,0,0" Text="Item Name:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.508,0.353"/>
+        <TextBox HorizontalAlignment="Left" Margin="160,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,0.448"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,0.448"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,0.448"/>
+        <TextBox HorizontalAlignment="Left" Margin="130,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,0.448"/>
+        <TextBox HorizontalAlignment="Left" Margin="130,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,0.448"/>
+        <TextBox HorizontalAlignment="Left" Margin="130,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,0.448"/>
+        <Button Content="Add Item" HorizontalAlignment="Left" Margin="130,250,0,0" VerticalAlignment="Top" Height="19" Width="107"/>
+    </Grid>
+</Window>
